@@ -56,7 +56,7 @@ export default function Contact() {
               href={waHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-13 w-full items-center justify-center rounded-full bg-([var(--brass)]) px-8 text-base font-bold text-(--velvet) transition-colors bg-background hover:bg-(--spotlight) focus-visible:outline focus-visible:outline-offset-[3px] focus-visible:outline-(--spotlight) sm:w-auto"
+              className="inline-flex min-h-13 w-full items-center justify-center rounded-full bg-([var(--brass)]) px-8 text-base font-bold text-(--velvet) transition-colors bg-(--spotlight) focus-visible:outline focus-visible:outline-offset-[3px] focus-visible:outline-(--spotlight) sm:w-auto"
             >
               {content.whatsapp.label}
               <span className="sr-only"> (buka di tab baru)</span>
