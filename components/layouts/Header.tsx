@@ -49,7 +49,7 @@ export default function Header() {
 
       <div className="mx-auto flex h-18 w-full max-w-300 items-center justify-between px-5">
         <Link href="/" aria-label={`${site.name}, ke atas halaman`} className={`rounded-md ${focusRing}`}>
-          <Image src={site.logo} alt={site.name} width={160} height={40} priority className="h-10 w-auto rounded-md" />
+          <Image src={site.logo} alt={site.name} width={160} height={40} className="h-10 w-40" />
         </Link>
 
         <nav aria-label="Menu utama" className="hidden items-center gap-8 md:flex">

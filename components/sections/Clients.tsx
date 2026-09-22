@@ -7,10 +7,12 @@ import Image from "next/image";
 type Client = { name: string; type: string; logo?: string };
 
 const content: { title: string; lead: string; clients: Client[] } = {
-  title: "Mereka yang sudah mempercayakan musiknya pada kami.",
-  lead: "Dari musisi dan penyelenggara acara sampai brand, inilah sebagian yang pernah bekerja sama dengan Stars Music.",
+  // title: "Mereka yang sudah mempercayakan musiknya pada kami.",
+  // lead: "Dari musisi dan penyelenggara acara sampai brand, inilah sebagian yang pernah bekerja sama dengan Stars Music.",
+  title: "Partner Banyak Brand, Artis & Label Musik",
+  lead: "Telah menjadi partner banyak brand, artis, dan label musik dalam berbagai kolaborasi, distribusi konten dan campaign digital",
   clients: [
-    { name: "Nama Klien 1", type: "Konser" },
+    { logo: "/images/clients/client-1-rfas-music.png", name: "Nama Klien 1", type: "Konser" },
     // { name: "Nama Klien 2", type: "Pernikahan" },
     // { name: "Nama Klien 3", type: "Rekaman" },
     // { name: "Nama Klien 4", type: "Festival" },
@@ -35,14 +37,14 @@ export default function Clients() {
           <p className="leading-[1.7] text-(--smoke)">{content.lead}</p>
         </div>
 
-        <ul className="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <ul className="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
           {content.clients.map((c) => (
             <li
               key={c.name}
-              className="flex aspect-3/2 flex-col items-center justify-center gap-2 rounded-2xl bg-(--spotlight) p-5 text-center text-(--velvet)"
+              className="flex aspect-3/2 flex-col items-center justify-center gap-2 rounded-2xl bg-(--spotlight) p-2 text-center text-(--velvet)"
             >
               {c.logo ? (
-                <div className="relative h-14 w-full">
+                <div className="relative h-40 w-full">
                   <Image
                     src={c.logo}
                     alt={c.name}
@@ -56,7 +58,6 @@ export default function Clients() {
                   {c.name}
                 </span>
               )}
-              <span className="text-xs font-semibold text-(--curtain)">{c.type}</span>
             </li>
           ))}
         </ul>
